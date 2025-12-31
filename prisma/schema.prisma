@@ -1,0 +1,131 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// نموذج المستخدم - User Model
+model User {
+  id            String        @id @default(cuid())
+  email         String        @unique
+  name          String
+  password      String        // كلمة المرور المشفرة - Hashed password
+  phone         String?
+  gender        String?
+  age           Int?
+  weight        Float?
+  height        Float?
+  goal          String?
+  activityLevel String?
+  subscription  Subscription?
+  orders        Order[]
+  forumPosts    ForumPost[]
+  forumReplies  ForumReply[]
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+}
+
+// نموذج الاشتراك - Subscription Model
+model Subscription {
+  id        String             @id @default(cuid())
+  userId    String             @unique
+  user      User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan      SubscriptionPlan   @default(BASIC)
+  status    SubscriptionStatus @default(ACTIVE)
+  startDate DateTime           @default(now())
+  endDate   DateTime?
+  createdAt DateTime           @default(now())
+  updatedAt DateTime           @updatedAt
+}
+
+enum SubscriptionPlan {
+  BASIC
+  PRO
+  VIP
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  CANCELLED
+  EXPIRED
+}
+
+// نموذج الكتاب - Book Model
+model Book {
+  id            String   @id @default(cuid())
+  title         String
+  description   String
+  price         Float
+  isFree        Boolean  @default(false)
+  coverEmoji    String
+  pages         Int
+  category      String
+  downloadCount Int      @default(0)
+  rating        Float    @default(0)
+  orders        Order[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+// نموذج الطلب - Order Model
+model Order {
+  id            String      @id @default(cuid())
+  userId        String
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bookId        String
+  book          Book        @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  email         String
+  status        OrderStatus @default(PENDING)
+  amount        Float
+  paymentMethod String?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}
+
+enum OrderStatus {
+  PENDING
+  PAID
+  DELIVERED
+}
+
+// نموذج منشور المنتدى - Forum Post Model
+model ForumPost {
+  id        String        @id @default(cuid())
+  title     String
+  content   String
+  category  String
+  authorId  String
+  author    User          @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  views     Int           @default(0)
+  likes     Int           @default(0)
+  isPinned  Boolean       @default(false)
+  isHot     Boolean       @default(false)
+  replies   ForumReply[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+// نموذج رد المنتدى - Forum Reply Model
+model ForumReply {
+  id        String    @id @default(cuid())
+  content   String
+  postId    String
+  post      ForumPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+  authorId  String
+  author    User      @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  likes     Int       @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+// نموذج مشترك النشرة البريدية - Newsletter Subscriber Model
+model NewsletterSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
