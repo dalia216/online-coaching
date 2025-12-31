@@ -1,9 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 export default function RegisterPage() {
+  const router = useRouter()
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({
     name: '',
@@ -83,7 +85,7 @@ export default function RegisterPage() {
 
       if (response.ok) {
         alert('تم التسجيل بنجاح! 🎉')
-        window.location.href = '/login'
+        router.push('/login')
       } else {
         alert(data.error || 'حدث خطأ في التسجيل')
       }
