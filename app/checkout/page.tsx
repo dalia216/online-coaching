@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 
+export const dynamic = 'force-dynamic'
+
 export default function CheckoutPage() {
   const searchParams = useSearchParams()
   const [email, setEmail] = useState('')
@@ -62,7 +64,7 @@ export default function CheckoutPage() {
       <Navbar />
 
       <div className="pt-24 pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Progress */}
           <div className="flex items-center justify-center gap-4 mb-12">
             <div className="flex items-center gap-2">
@@ -128,7 +130,7 @@ export default function CheckoutPage() {
                     className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-all ${
                       paymentMethod === 'vodafone'
                         ? 'border-green-500 bg-green-500/10'
-                        :  'border-white/10 hover: border-white/30'
+                        : 'border-white/10 hover:border-white/30'
                     }`}
                   >
                     <input
@@ -243,7 +245,7 @@ export default function CheckoutPage() {
 
           {/* Back */}
           <div className="text-center mt-8">
-            <Link href="/store" className="text-gray-400 hover: text-white transition-colors">
+            <Link href="/store" className="text-gray-400 hover:text-white transition-colors">
               ← العودة للمكتبة
             </Link>
           </div>

@@ -84,7 +84,7 @@ export default function LoginPage() {
                 <input type="checkbox" className="w-4 h-4 rounded" />
                 <span className="text-gray-400">تذكرني</span>
               </label>
-              <Link href="/forgot-password" className="text-green-400 hover: underline">
+              <Link href="/forgot-password" className="text-green-400 hover:underline">
                 نسيت كلمة المرور؟
               </Link>
             </div>
@@ -118,7 +118,7 @@ export default function LoginPage() {
               <span>📘</span>
               <span>Facebook</span>
             </button>
-            <button className="flex items-center justify-center gap-2 p-3 bg-white/10 rounded-xl hover: bg-white/20 transition-colors">
+            <button className="flex items-center justify-center gap-2 p-3 bg-white/10 rounded-xl hover:bg-white/20 transition-colors">
               <span>🔵</span>
               <span>Google</span>
             </button>
@@ -135,7 +135,7 @@ export default function LoginPage() {
 
         {/* Back to Home */}
         <div className="text-center mt-6">
-          <Link href="/" className="text-gray-400 hover: text-white transition-colors">
+          <Link href="/" className="text-gray-400 hover:text-white transition-colors">
             ← العودة للرئيسية
           </Link>
         </div>

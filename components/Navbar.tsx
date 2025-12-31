@@ -45,7 +45,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/login"
-              className="text-gray-300 hover: text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors"
             >
               تسجيل الدخول
             </Link>

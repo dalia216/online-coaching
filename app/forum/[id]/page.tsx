@@ -110,7 +110,7 @@ export default function ForumPostPage() {
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-8">
             <Link href="/" className="hover:text-white">الرئيسية</Link>
             <span>←</span>
-            <Link href="/forum" className="hover: text-white">المنتدى</Link>
+            <Link href="/forum" className="hover:text-white">المنتدى</Link>
             <span>←</span>
             <span className="text-white">{post.category}</span>
           </div>
@@ -195,7 +195,7 @@ export default function ForumPostPage() {
                       </div>
                       <p className="text-gray-300 mb-3">{comment.content}</p>
                       <div className="flex items-center gap-4 text-sm">
-                        <button className="flex items-center gap-1 text-gray-400 hover: text-white">
+                        <button className="flex items-center gap-1 text-gray-400 hover:text-white">
                           <span>👍</span>
                           <span>{comment.likes}</span>
                         </button>
@@ -232,7 +232,7 @@ export default function ForumPostPage() {
 
           {/* Back to Forum */}
           <div className="text-center mt-8">
-            <Link href="/forum" className="text-gray-400 hover: text-white transition-colors">
+            <Link href="/forum" className="text-gray-400 hover:text-white transition-colors">
               ← العودة للمنتدى
             </Link>
           </div>

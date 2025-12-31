@@ -125,7 +125,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8">
-            <Link href="/testimonials" className="text-green-400 hover: underline">
+            <Link href="/testimonials" className="text-green-400 hover:underline">
               شاهد المزيد من قصص النجاح ←
             </Link>
           </div>
@@ -142,7 +142,7 @@ export default function Home() {
             <p className="text-gray-400">اختار الخطة اللي تناسب أهدافك</p>
           </div>
 
-          <div className="grid md: grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {plans. map((plan, index) => (
               <div
                 key={index}
@@ -181,7 +181,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8">
-            <Link href="/pricing" className="text-green-400 hover: underline">
+            <Link href="/pricing" className="text-green-400 hover:underline">
               قارن بين الخطط بالتفصيل ←
             </Link>
           </div>
@@ -222,7 +222,7 @@ export default function Home() {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="card bg-gradient-to-r from-green-500/20 to-purple-500/20 text-center py-16">
-            <h2 className="text-3xl md: text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               جاهز تبدأ رحلتك؟ 🚀
             </h2>
             <p className="text-gray-400 mb-8 max-w-xl mx-auto">

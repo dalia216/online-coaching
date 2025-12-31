@@ -88,7 +88,7 @@ export default function BookPage() {
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-8">
             <Link href="/" className="hover:text-white">الرئيسية</Link>
             <span>←</span>
-            <Link href="/store" className="hover: text-white">المكتبة</Link>
+            <Link href="/store" className="hover:text-white">المكتبة</Link>
             <span>←</span>
             <span className="text-white">{book.title}</span>
           </div>
@@ -249,7 +249,7 @@ export default function BookPage() {
 
           {/* Back */}
           <div className="text-center mt-8">
-            <Link href="/store" className="text-gray-400 hover: text-white transition-colors">
+            <Link href="/store" className="text-gray-400 hover:text-white transition-colors">
               ← العودة للمكتبة
             </Link>
           </div>

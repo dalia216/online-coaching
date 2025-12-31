@@ -407,7 +407,7 @@ export default function RegisterPage() {
 
         {/* Back to Home */}
         <div className="text-center mt-6">
-          <Link href="/" className="text-gray-400 hover: text-white transition-colors">
+          <Link href="/" className="text-gray-400 hover:text-white transition-colors">
             ← العودة للرئيسية
           </Link>
         </div>

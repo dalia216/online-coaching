@@ -81,7 +81,7 @@ export default function CoachDashboard() {
         </nav>
 
         <div className="absolute bottom-4 right-4 left-4">
-          <Link href="/" className="flex items-center gap-3 px-4 py-3 text-gray-400 hover: text-white transition-colors">
+          <Link href="/" className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-white transition-colors">
             <span>🚪</span>
             <span>تسجيل الخروج</span>
           </Link>
