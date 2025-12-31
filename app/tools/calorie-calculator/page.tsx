@@ -169,9 +169,9 @@ export default function CalorieCalculatorPage() {
                       type="button"
                       onClick={() => setGoal(g.id)}
                       className={`p-4 rounded-xl border-2 transition-all text-center ${
-                        goal === g. id
-                          ?  'border-green-500 bg-green-500/10'
-                          :  'border-white/10 hover: border-white/30'
+                        goal === g.id
+                          ? 'border-green-500 bg-green-500/10'
+                          : 'border-white/10 hover:border-white/30'
                       }`}
                     >
                       <span className="text-2xl">{g.icon}</span>

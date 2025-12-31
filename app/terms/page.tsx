@@ -194,7 +194,7 @@ export default function TermsPage() {
               سياسة الخصوصية
             </Link>
             <span className="text-gray-600">|</span>
-            <Link href="/" className="text-gray-400 hover: text-white">
+            <Link href="/" className="text-gray-400 hover:text-white">
               العودة للرئيسية
             </Link>
           </div>

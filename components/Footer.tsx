@@ -31,7 +31,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#11111b] border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Logo & Description */}
           <div className="lg:col-span-2">
@@ -67,8 +67,8 @@ export default function Footer() {
                 {links.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={link. href}
-                      className="text-gray-400 hover: text-white transition-colors text-sm"
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {link.label}
                     </Link>
@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md: flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
             © 2024 FitCoach Pro. جميع الحقوق محفوظة. 
           </p>

@@ -168,7 +168,7 @@ export default function StorePage() {
       <Navbar />
 
       <div className="pt-24 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="text-6xl mb-4">📚</div>
@@ -215,7 +215,7 @@ export default function StorePage() {
           </div>
 
           {/* Books Grid */}
-          <div className="grid sm:grid-cols-2 lg: grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredBooks.map((book) => (
               <div key={book.id} className="card hover:scale-105 transition-transform relative">
                 {/* Badge */}
@@ -289,7 +289,7 @@ export default function StorePage() {
             <div className="text-4xl mb-4">📬</div>
             <h2 className="text-2xl font-bold mb-2">اشترك في النشرة البريدية</h2>
             <p className="text-gray-400 mb-6">احصل على كتب مجانية وعروض حصرية مباشرة على إيميلك</p>
-            <form className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">
+            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="بريدك الإلكتروني"

@@ -32,7 +32,7 @@ export default function CartPage() {
     <div className="min-h-screen pt-24 pb-20">
       {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#11111b]/80 backdrop-blur-xl border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-purple-500 rounded-xl flex items-center justify-center text-xl">
@@ -44,7 +44,7 @@ export default function CartPage() {
         </div>
       </nav>
 
-      <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">
@@ -71,7 +71,7 @@ export default function CartPage() {
                   <div className="flex items-center gap-3">
                     <button
                       onClick={() => updateQuantity(item.id, -1)}
-                      className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover: bg-white/20 transition-colors"
+                      className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
                     >
                       -
                     </button>

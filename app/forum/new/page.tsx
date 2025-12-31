@@ -39,7 +39,7 @@ export default function NewPostPage() {
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-8">
             <Link href="/" className="hover:text-white">الرئيسية</Link>
             <span>←</span>
-            <Link href="/forum" className="hover: text-white">المنتدى</Link>
+            <Link href="/forum" className="hover:text-white">المنتدى</Link>
             <span>←</span>
             <span className="text-white">موضوع جديد</span>
           </div>
@@ -141,7 +141,7 @@ export default function NewPostPage() {
 
           {/* Back */}
           <div className="text-center mt-8">
-            <Link href="/forum" className="text-gray-400 hover: text-white transition-colors">
+            <Link href="/forum" className="text-gray-400 hover:text-white transition-colors">
               ← العودة للمنتدى
             </Link>
           </div>

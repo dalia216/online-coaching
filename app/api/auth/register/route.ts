@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { hashPassword } from '@/lib/auth'
 
+export const dynamic = 'force-dynamic'
+
 // تسجيل مستخدم جديد - Register new user
 export async function POST(request: NextRequest) {
   try {

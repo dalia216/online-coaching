@@ -84,7 +84,7 @@ export default function ForgotPasswordPage() {
 
           {/* Back to Login */}
           <div className="text-center mt-6 pt-6 border-t border-white/10">
-            <Link href="/login" className="text-green-400 hover: text-green-300">
+            <Link href="/login" className="text-green-400 hover:text-green-300">
               ← العودة لتسجيل الدخول
             </Link>
           </div>
