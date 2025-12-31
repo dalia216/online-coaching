@@ -1,11 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 export default function RegisterPage() {
-  const router = useRouter()
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({
     name: '',
@@ -44,7 +42,7 @@ export default function RegisterPage() {
     { id: 'vip', name: 'VIP', price: '999', features: ['كل المميزات', 'مدرب خاص', 'أولوية الرد'] },
   ]
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e:  React.FormEvent) => {
     e.preventDefault()
     
     if (step < 3) {
@@ -52,49 +50,12 @@ export default function RegisterPage() {
       return
     }
 
-    // Validation
-    if (formData.password !== formData.confirmPassword) {
-      alert('كلمة المرور غير متطابقة!')
-      return
-    }
-
     setLoading(true)
-    
-    try {
-      const response = await fetch('/api/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          password: formData.password,
-          gender: formData.gender,
-          age: parseInt(formData.age),
-          weight: parseFloat(formData.weight),
-          height: parseFloat(formData.height),
-          goal: formData.goal,
-          activityLevel: formData.activity,
-          plan: formData.plan,
-        }),
-      })
-
-      const data = await response.json()
-
-      if (response.ok) {
-        alert('تم التسجيل بنجاح! 🎉')
-        router.push('/login')
-      } else {
-        alert(data.error || 'حدث خطأ في التسجيل')
-      }
-    } catch (error) {
-      console.error('Registration error:', error)
-      alert('حدث خطأ في الاتصال. حاول مرة أخرى.')
-    } finally {
+    setTimeout(() => {
+      console.log('Register:', formData)
       setLoading(false)
-    }
+      // Redirect to success or dashboard
+    }, 2000)
   }
 
   return (
